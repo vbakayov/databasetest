@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+/home/viktor/Documents/TeamProject/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2227132709.index
+1233055987.index
+2836855618.index
+3046304088.index
+1480226211.index

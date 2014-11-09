@@ -1,0 +1,31 @@
+package main;
+import java.sql.Connection;
+import java.sql.Statement; //sql quiereis
+import java.sql.DriverManager; //conections
+import java.lang.ClassNotFoundException;
+import java.sql.SQLException;
+
+
+public class Connection1 {
+
+	public static void main (String[] args){
+		 
+		Connection connection = null;
+		Statement statement = null;
+		
+		try{
+			//Utilize the driver 
+			Class.forName("com.mysql.jdbc.Driver");
+			//Connect the driver to the database
+			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/youtube","root","orelole1");
+			System.out.println("Connection Successful");
+		}catch(ClassNotFoundException err){
+			System.out.println("Error"+ err.getMessage());
+		}catch(SQLException error){
+			System.out.println("Error"+ error.getMessage());
+		}finally{
+			if(connection != null) try{connection.close();}catch(SQLException ingone){}
+			if(statement != null) try{statement.close();}catch(SQLException ingone){}
+		}
+	}
+}
